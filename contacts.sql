@@ -3,6 +3,12 @@ create database exo_contacts;
 
 use exo_contacts;
 
+create table pays(
+    iso_3 char(3) primary key,
+    nom varchar(70),
+    iso_2 varchar(3),
+    nationalite varchar(50)
+);
 
 create table contacts(
     id int primary key auto_increment,
@@ -13,16 +19,12 @@ create table contacts(
     adresse text,
     cp varchar(10),
     ville varchar(70),
-    pays_iso_3 varchar(3),
-    foreign key (pays) references pays(iso_3)
+    pays_iso_3 char(3),
+    foreign key (pays_iso_3) references pays(iso_3)
 );
 
-create table pays(
-    iso_3 char(3) primary key,
-    nom varchar(70),
-    iso_2 varchar(3),
-    nationalite varchar(50)
-);
+
+
 insert into pays(iso_2, iso_3, nom, nationalite) values
 ('AF', 'AFG', 'Afghanistan', 'Afghane'),
 ('AL', 'ALB', 'Albanie', 'Albanaise'),
