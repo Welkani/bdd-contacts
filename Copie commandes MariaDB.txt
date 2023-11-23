@@ -1,0 +1,262 @@
++-------------------+-------------+------+-----+---------+----------------+
+| Field             | Type        | Null | Key | Default | Extra          |
++-------------------+-------------+------+-----+---------+----------------+
+| id                | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nom               | varchar(70) | YES  |     | NULL    |                |
+| pays              | varchar(70) | YES  |     | NULL    |                |
+| date_de_naissance | date        | YES  |     | NULL    |                |
+| sexe              | varchar(10) | YES  |     | NULL    |                |
+| adresse           | text        | YES  |     | NULL    |                |
+| cp                | varchar(10) | YES  |     | NULL    |                |
+| ville             | varchar(70) | YES  |     | NULL    |                |
+| pays_iso_3        | char(3)     | YES  | MUL | NULL    |                |
++-------------------+-------------+------+-----+---------+----------------+
+9 rows in set (0.007 sec)
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| iso_3       | char(3)     | NO   | PRI | NULL    |       |
+| nom         | varchar(70) | YES  |     | NULL    |       |
+| iso_2       | varchar(3)  | YES  |     | NULL    |       |
+| nationalite | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.010 sec)
+
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| id         | int(11)             | NO   | PRI | NULL    | auto_increment |
+| id_contact | int(250)            | YES  | MUL | NULL    |                |
+| numero     | varchar(50)         | YES  |     | NULL    |                |
+| type       | enum('perso','pro') | YES  |     | NULL    |                |
++------------+---------------------+------+-----+---------+----------------+
+4 rows in set (0.010 sec)
+
++----+------------------+-------------+-------------------+-------+---------------------------+-----------+-------------+------------+ 
+| id | nom              | pays        | date_de_naissance | sexe  | adresse                   | cp        | ville       | pays_iso_3 | 
++----+------------------+-------------+-------------------+-------+---------------------------+-----------+-------------+------------+ 
+|  1 | John Doe         | Etats-Unis  | 1985-05-15        | Homme | 123 Main St               | 10001     | New York    | USA        | 
+|  2 | Alice Smith      | Royaume_Uni | 1990-03-22        | Femme | 456 Park Lane             | SW1A 1AA  | London      | GBR        | 
+|  3 | Carlos Rodriguez | Espagne     | 1982-08-10        | Homme | 789 Calle Principal       | 28001     | Madrid      | ESP        |
+|  4 | Sophie Dupont    | France      | 1988-11-27        | Femme | 101 Rue de la Republique  | 75001     | Paris       | FRA        | 
+|  5 | Ahmed Ali        | Egypte      | 1980-07-03        | Homme | 456 Nile Street           | 11511     | Cairo       | EGY        | 
+|  6 | Maria Gonzalez   | Mexique     | 1992-04-18        | Femme | 789 Avenida de la Reforma | 06700     | Mexico City | MEX        | 
+|  7 | Yuki Tanaka      | Japon       | 1987-09-05        | Femme | 123 Sakura Lane           | 100-0001  | Tokyo       | JPN        |
+|  8 | Ricardo Silva    | Brazil      | 1984-01-30        | Homme | 456 Avenida Paulista      | 01310-100 | S├úo Paulo  | BRA        | 
+|  9 | Priya Patel      | Inde        | 1989-06-12        | Femme | 789 Mumbai Street         | 400001    | Mumbai      | IND        | 
+| 10 | Ivan Ivanov      | Russie      | 1983-12-08        | Homme | 101 Red Square            | 103073    | Moscow      | RUS        | 
++----+------------------+-------------+-------------------+-------+---------------------------+-----------+-------------+------------+ 
+10 rows in set (0.000 sec)
+
++-------+---------------------------------+-------+--------------------------------+
+| iso_3 | nom                             | iso_2 | nationalite                    |
++-------+---------------------------------+-------+--------------------------------+
+| AFG   | Afghanistan                     | AF    | Afghane                        |
+| AGO   | Angola                          | AO    | Angolaise                      |
+| ALB   | Albanie                         | AL    | Albanaise                      |
+| AND   | Andorre                         | AD    | Andorrane                      |
+| ARE   | Emirats arabes unis             | AE    | emirienne                      |
+| ARG   | Argentine                       | AR    | Argentine                      |
+| ARM   | Armenie                         | AM    | Armenienne                     |
+| ATG   | Antigua-et-Barbuda              | AG    | Antiguaise                     |
+| AUS   | Australie                       | AU    | Australienne                   |
+| AUT   | Autriche                        | AT    | Autrichienne                   |
+| AZE   | Azerbaidjan                     | AZ    | Azerbaidjanaise                |
+| BDI   | Burundi                         | BI    | Burundaise                     |
+| BEL   | Belgique                        | BE    | Belge                          |
+| BEN   | Benin                           | BJ    | Beninoise                      |
+| BFA   | Burkina Faso                    | BF    | Burkinabee                     |
+| BGD   | Bangladesh                      | BD    | Bangladaise                    |
+| BGR   | Bulgarie                        | BG    | Bulgare                        |
+| BHR   | Bahrein                         | BH    | Bahreinienne                   |
+| BHS   | Bahamas                         | BS    | Bahameenne                     |
+| BIH   | Bosnie-Herzegovine              | BA    | Bosnienne                      |
+| BLR   | Bielorussie                     | BY    | Bielorusse                     |
+| BLZ   | Belize                          | BZ    | Belizienne                     |
+| BOL   | Bolivie                         | BO    | Bolivienne                     |
+| BRA   | Bresil                          | BR    | Bresilienne                    |
+| BRB   | Barbade                         | BB    | Barbadienne                    |
+| BRN   | Brunei Darussalam               | BN    | Bruneienne                     |
+| BTN   | Bhoutan                         | BT    | Bhoutanaise                    |
+| CAF   | Republique centrafricaine       | CF    | Centrafricaine                 |
+| CAN   | Canada                          | CA    | Canadienne                     |
+| CHE   | Suisse                          | CH    | Suisse                         |
+| CHL   | Chili                           | CL    | Chilienne                      |
+| CHN   | Chine                           | CN    | Chinoise                       |
+| CMR   | Cameroun                        | CM    | Camerounaise                   |
+| COG   | Congo                           | CG    | Congolaise                     |
+| COL   | Colombie                        | CO    | Colombienne                    |
+| COM   | Comores                         | KM    | Comorienne                     |
+| CPV   | Cap-Vert                        | CV    | Cap-verdienne                  |
+| CRI   | Costa Rica                      | CR    | Costaricaine                   |
+| CUB   | Cuba                            | CU    | Cubaine                        |
+| CYP   | Chypre                          | CY    | Chypriote                      |
+| CZE   | Republique tch├¿que             | CZ    | Tch├¿que                       |
+| DEU   | Allemagne                       | DE    | Allemande                      |
+| DJI   | Djibouti                        | DJ    | Djiboutienne                   |
+| DMA   | Dominique                       | DM    | Dominiquaise                   |
+| DNK   | Danemark                        | DK    | Danoise                        |
+| DOM   | Republique dominicaine          | DO    | Dominicaine                    |
+| DZA   | Algerie                         | DZ    | Algerienne                     |
+| ECU   | Equateur                        | EC    | Equatorienne                   |
+| EGY   | Egypte                          | EG    | Egyptienne                     |
+| ERI   | Erythree                        | ER    | Erythreenne                    |
+| ESP   | Espagne                         | ES    | Espagnole                      |
+| EST   | Estonie                         | EE    | Estonienne                     |
+| ETH   | ethiopie                        | ET    | Ethiopienne                    |
+| FIN   | Finlande                        | FI    | Finlandaise                    |
+| FJI   | Fidji                           | FJ    | Fidjienne                      |
+| FRA   | France                          | FR    | Fran├ºaise                     |
+| FSM   | Micronesie                      | FM    | Micronesienne                  |
+| GAB   | Gabon                           | GA    | Gabonaise                      |
+| GBR   | Royaume-Uni                     | GB    | Britannique                    |
+| GEO   | Georgie                         | GE    | Georgienne                     |
+| GHA   | Ghana                           | GH    | Ghaneenne                      |
+| GIN   | Guinee                          | GN    | Guineenne                      |
+| GMB   | Gambie                          | GM    | Gambienne                      |
+| GNB   | Guinee-Bissau                   | GW    | Bissau-Guineenne               |
+| GNQ   | Guinee equatoriale              | GQ    | Equato-guineenne               |
+| GRC   | Gr├¿ce                          | GR    | Grecque                        |
+| GRD   | Grenade                         | GD    | Grenadienne                    |
+| GTM   | Guatemala                       | GT    | Guatemalt├¿que                 |
+| GUY   | Guyana                          | GY    | Guyanaise                      |
+| HND   | Honduras                        | HN    | Hondurienne                    |
+| HRV   | Croatie                         | HR    | Croate                         |
+| HTI   | Haiti                           | HT    | Haitienne                      |
+| HUN   | Hongrie                         | HU    | Hongroise                      |
+| IDN   | Indonesie                       | ID    | Indonesienne                   |
+| IND   | Inde                            | IN    | Indienne                       |
+| IRL   | Irlande                         | IE    | Irlandaise                     |
+| IRN   | Iran                            | IR    | Iranienne                      |
+| IRQ   | Irak                            | IQ    | Irakienne                      |
+| ISL   | Islande                         | IS    | Islandaise                     |
+| ISR   | Israel                          | IL    | Israelienne                    |
+| ITA   | Italie                          | IT    | Italienne                      |
+| JAM   | Jamaique                        | JM    | Jamaicaine                     |
+| JOR   | Jordanie                        | JO    | Jordanienne                    |
+| JPN   | Japon                           | JP    | Japonaise                      |
+| KAZ   | Kazakhstan                      | KZ    | Kazakhe                        |
+| KEN   | Kenya                           | KE    | Kenyane                        |
+| KGZ   | Kirghizistan                    | KG    | Kirghize                       |
+| KHM   | Cambodge                        | KH    | Cambodgienne                   |
+| KIR   | Kiribati                        | KI    | Kiribatienne                   |
+| KNA   | Saint-Christophe-et-Nieves      | KN    | Saint-Kittsienne-et-Nevicienne |
+| KOR   | Coree du Sud                    | KR    | Sud-coreenne                   |
+| KWT   | Koweit                          | KW    | Koweitienne                    |
+| LAO   | Laos                            | LA    | Laotienne                      |
+| LBN   | Liban                           | LB    | Libanaise                      |
+| LBR   | Liberia                         | LR    | Liberienne                     |
+| LBY   | Libye                           | LY    | Libyenne                       |
+| LCA   | Sainte-Lucie                    | LC    | Saint-Lucienne                 |
+| LIE   | Liechtenstein                   | LI    | Liechtensteinoise              |
+| LKA   | Sri Lanka                       | LK    | Sri-Lankaise                   |
+| LSO   | Lesotho                         | LS    | Lesothienne                    |
+| LTU   | Lituanie                        | LT    | Lituanienne                    |
+| LUX   | Luxembourg                      | LU    | Luxembourgeoise                |
+| LVA   | Lettonie                        | LV    | Lettone                        |
+| MAR   | Maroc                           | MA    | Marocaine                      |
+| MCO   | Monaco                          | MC    | Monegasque                     |
+| MDA   | Moldavie                        | MD    | Moldave                        |
+| MDG   | Madagascar                      | MG    | Malgache                       |
+| MDV   | Maldives                        | MV    | Maldivienne                    |
+| MEX   | Mexique                         | MX    | Mexicaine                      |
+| MHL   | Iles Marshall                   | MH    | Marshallaise                   |
+| MKD   | Macedoine du Nord               | MK    | Macedonienne                   |
+| MLI   | Mali                            | ML    | Malienne                       |
+| MLT   | Malte                           | MT    | Maltaise                       |
+| MMR   | Myanmar                         | MM    | Myanmaraise                    |
+| MNE   | Montenegro                      | ME    | Montenegrine                   |
+| MNG   | Mongolie                        | MN    | Mongole                        |
+| MOZ   | Mozambique                      | MZ    | Mozambicaine                   |
+| MRT   | Mauritanie                      | MR    | Mauritanienne                  |
+| MUS   | Maurice                         | MU    | Mauricienne                    |
+| MWI   | Malawi                          | MW    | Malawite                       |
+| MYS   | Malaisie                        | MY    | Malaisienne                    |
+| NAM   | Namibie                         | NA    | Namibienne                     |
+| NER   | Niger                           | NE    | Nigerienne                     |
+| NGA   | Nigeria                         | NG    | Nigeriane                      |
+| NIC   | Nicaragua                       | NI    | Nicaraguayenne                 |
+| NLD   | Pays-Bas                        | NL    | Neerlandaise                   |
+| NOR   | Norv├¿ge                        | NO    | Norvegienne                    |
+| NPL   | Nepal                           | NP    | Nepalaise                      |
+| NRU   | Nauru                           | NR    | Nauruane                       |
+| NZL   | Nouvelle-Zelande                | NZ    | Neo-Zelandaise                 |
+| OMN   | Oman                            | OM    | Omanaise                       |
+| PAK   | Pakistan                        | PK    | Pakistanaise                   |
+| PAN   | Panama                          | PA    | Panameenne                     |
+| PER   | Perou                           | PE    | Peruvienne                     |
+| PHL   | Philippines                     | PH    | Philippine                     |
+| PLW   | Palaos                          | PW    | Palaosienne                    |
+| PNG   | Papouasie-Nouvelle-Guinee       | PG    | Papouasienne                   |
+| POL   | Pologne                         | PL    | Polonaise                      |
+| PRK   | Coree du Nord                   | KP    | Nord-coreenne                  |
+| PRT   | Portugal                        | PT    | Portugaise                     |
+| PRY   | Paraguay                        | PY    | Paraguayenne                   |
+| QAT   | Qatar                           | QA    | Qatarienne                     |
+| ROU   | Roumanie                        | RO    | Roumaine                       |
+| RUS   | Russie                          | RU    | Russe                          |
+| RWA   | Rwanda                          | RW    | Rwandaise                      |
+| SAU   | Arabie saoudite                 | SA    | Saoudienne                     |
+| SDN   | Soudan                          | SD    | Soudanaise                     |
+| SEN   | Senegal                         | SN    | Senegalaise                    |
+| SGP   | Singapour                       | SG    | Singapourienne                 |
+| SLB   | Iles Salomon                    | SB    | Salomonaise                    |
+| SLE   | Sierra Leone                    | SL    | Sierra-Leonaise                |
+| SLV   | El Salvador                     | SV    | Salvadorienne                  |
+| SMR   | Saint-Marin                     | SM    | Saint-Marinaise                |
+| SOM   | Somalie                         | SO    | Somalienne                     |
+| SRB   | Serbie                          | RS    | Serbe                          |
+| SSD   | Soudan du Sud                   | SS    | Soudanaise du Sud              |
+| STP   | Sao Tome-et-Principe            | ST    | Santomeenne-et-Princienne      |
+| SUR   | Suriname                        | SR    | Surinamaise                    |
+| SVK   | Slovaquie                       | SK    | Slovaque                       |
+| SVN   | Slovenie                        | SI    | Slov├¿ne                       |
+| SWE   | Suede                           | SE    | Suedoise                       |
+| SWZ   | Eswatini                        | SZ    | Eswatinienne                   |
+| SYC   | Seychelles                      | SC    | Seychelloise                   |
+| SYR   | Syrie                           | SY    | Syrienne                       |
+| TCD   | Tchad                           | TD    | Tchadienne                     |
+| TGO   | Togo                            | TG    | Togolaise                      |
+| THA   | Thailande                       | TH    | Thailandaise                   |
+| TJK   | Tadjikistan                     | TJ    | Tadjike                        |
+| TKM   | Turkmenistan                    | TM    | Turkmene                       |
+| TLS   | Timor oriental                  | TL    | Est-timoraise                  |
+| TON   | Tonga                           | TO    | Tongienne                      |
+| TTO   | Trinite-et-Tobago               | TT    | Trinidadienne-et-Tobagonienne  |
+| TUN   | Tunisie                         | TN    | Tunisienne                     |
+| TUR   | Turquie                         | TR    | Turque                         |
+| TUV   | Tuvalu                          | TV    | Tuvaluane                      |
+| TZA   | Tanzanie                        | TZ    | Tanzanienne                    |
+| UGA   | Ouganda                         | UG    | Ougandaise                     |
+| UKR   | Ukraine                         | UA    | Ukrainienne                    |
+| URY   | Uruguay                         | UY    | Uruguayenne                    |
+| USA   | etats-Unis                      | US    | Americaine                     |
+| UZB   | Ouzbekistan                     | UZ    | Ouzb├¿ke                       |
+| VAT   | Vatican                         | VA    | Vaticane                       |
+| VCT   | Saint-Vincent-et-les-Grenadines | VC    | Saint-Vincentaise-et-Grenadine |
+| VEN   | Venezuela                       | VE    | Venezuelienne                  |
+| VNM   | Vietnam                         | VN    | Vietnamienne                   |
+| VUT   | Vanuatu                         | VU    | Vanuatuane                     |
+| WSM   | Samoa                           | WS    | Samoane                        |
+| YEM   | Yemen                           | YE    | Yemenite                       |
+| ZAF   | Afrique du Sud                  | ZA    | Sud-Africaine                  |
+| ZMB   | Zambie                          | ZM    | Zambienne                      |
+| ZWE   | Zimbabwe                        | ZW    | Zimbabweenne                   |
++-------+---------------------------------+-------+--------------------------------+
+191 rows in set (0.000 sec)
+
++----+------------+---------------+-------+
+| id | id_contact | numero        | type  |
++----+------------+---------------+-------+
+|  1 |          1 | +93123456789  | perso |
+|  2 |          4 | +551122334455 | perso |
+|  3 |          2 | +15445566778  | perso |
+|  4 |          3 | +811122233344 | perso |
+|  5 |          2 | +33123456789  | pro   |
+|  6 |          1 | +441234567890 | pro   |
+|  7 |          3 | +813344556677 | pro   |
+|  8 |          5 | +861516171819 | pro   |
+|  9 |          4 | +491234567890 | pro   |
+| 10 |          5 | +911011121314 | perso |
++----+------------+---------------+-------+
