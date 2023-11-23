@@ -18,12 +18,12 @@ create table contacts(
 );
 
 create table pays(
-    iso_3 char(3) primary key ,
+    iso_3 char(3) primary key,
     nom varchar(70),
     iso_2 varchar(3),
     nationalite varchar(50)
 );
-insert into pays(iso_2, iso3, nom, nationalite) values
+insert into pays(iso_2, iso_3, nom, nationalite) values
 ('AF', 'AFG', 'Afghanistan', 'Afghane'),
 ('AL', 'ALB', 'Albanie', 'Albanaise'),
 ('DZ', 'DZA', 'Algerie', 'Algérienne'),
