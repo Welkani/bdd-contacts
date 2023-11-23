@@ -217,3 +217,16 @@ insert into pays(iso_2, iso_3, nom, nationalite) values
 ('YE', 'YEM', 'Yemen', 'Yéménite'),
 ('ZM', 'ZMB', 'Zambie', 'Zambienne'),
 ('ZW', 'ZWE', 'Zimbabwe', 'Zimbabwéenne');
+
+
+create table telephone(
+
+    id int primary key auto_increment,
+    id_contact INT(250),
+    numero VARCHAR(50),
+    type ENUM('perso', 'pro'),
+    foreign key (id_contact) references contacts(id)
+
+);
+
+
