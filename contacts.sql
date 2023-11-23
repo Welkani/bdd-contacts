@@ -230,17 +230,17 @@ create table telephone(
 );
 
 
-insert into contacts(nom, sexe, date_de_naissance, adresse, cp, ville, pays_iso_3) values
-('John Doe', 'Homme', '1985-05-15', '123 Main St', '10001', 'New York', 'USA'),
-('Alice Smith', 'Femme', '1990-03-22', '456 Park Lane', 'SW1A 1AA', 'London', 'GBR'),
-('Carlos Rodriguez', 'Homme', '1982-08-10', '789 Calle Principal', '28001', 'Madrid', 'ESP'),
-('Sophie Dupont', 'Femme', '1988-11-27', '101 Rue de la République', '75001', 'Paris', 'FRA'),
-('Ahmed Ali', 'Homme', '1980-07-03', '456 Nile Street', '11511', 'Cairo', 'EGY'),
-('Maria Gonzalez', 'Femme', '1992-04-18', '789 Avenida de la Reforma', '06700', 'Mexico City', 'MEX'),
-('Yuki Tanaka', 'Femme', '1987-09-05', '123 Sakura Lane', '100-0001', 'Tokyo', 'JPN'),
-('Ricardo Silva', 'Homme', '1984-01-30', '456 Avenida Paulista', '01310-100', 'São Paulo', 'BRA'),
-('Priya Patel', 'Femme', '1989-06-12', '789 Mumbai Street', '400001', 'Mumbai', 'IND'),
-('Ivan Ivanov', 'Homme', '1983-12-08', '101 Red Square', '103073', 'Moscow', 'RUS');
+insert into contacts(nom, sexe, date_de_naissance, adresse, cp, ville,pays, pays_iso_3) values
+('John Doe', 'Homme', '1985-05-15', '123 Main St', '10001', 'New York','Etats-Unis', 'USA'),
+('Alice Smith', 'Femme', '1990-03-22', '456 Park Lane', 'SW1A 1AA', 'London','Royaume_Uni', 'GBR'),
+('Carlos Rodriguez', 'Homme', '1982-08-10', '789 Calle Principal', '28001', 'Madrid','Espagne', 'ESP'),
+('Sophie Dupont', 'Femme', '1988-11-27', '101 Rue de la Republique', '75001', 'Paris','France', 'FRA'),
+('Ahmed Ali', 'Homme', '1980-07-03', '456 Nile Street', '11511', 'Cairo','Egypte', 'EGY'),
+('Maria Gonzalez', 'Femme', '1992-04-18', '789 Avenida de la Reforma', '06700', 'Mexico City','Mexique', 'MEX'),
+('Yuki Tanaka', 'Femme', '1987-09-05', '123 Sakura Lane', '100-0001', 'Tokyo','Japon', 'JPN'),
+('Ricardo Silva', 'Homme', '1984-01-30', '456 Avenida Paulista', '01310-100', 'São Paulo','Brazil', 'BRA'),
+('Priya Patel', 'Femme', '1989-06-12', '789 Mumbai Street', '400001', 'Mumbai','Inde', 'IND'),
+('Ivan Ivanov', 'Homme', '1983-12-08', '101 Red Square', '103073', 'Moscow','Russie', 'RUS');
 
 
 insert into telephone (id_contact, numero, type) values
@@ -254,3 +254,8 @@ insert into telephone (id_contact, numero, type) values
 (5, '+861516171819', 'pro'),
 (4, '+491234567890', 'pro'),   
 (5, '+911011121314', 'perso');
+
+select * from contacts;
+select * from pays;
+select * from telephone;
+
