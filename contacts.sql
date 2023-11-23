@@ -260,8 +260,8 @@ describe contacts;
 describe pays;
 describe telephone;
 
-select * from contacts;
+select * from contacts ;
 select * from pays;
-select * from telephone;
+select * from contacts left join telephone ON telephone.id_contact=contacts.id;
 
 
