@@ -262,6 +262,6 @@ describe telephone;
 
 select * from contacts ;
 select * from pays;
-select * from contacts left join telephone ON telephone.id_contact=contacts.id;
+select * from telephone;
 
 
